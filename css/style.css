@@ -1,0 +1,191 @@
+*{
+    font-family: arial;
+    font-size: 1.2rem;
+
+}
+.main-container{
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    grid-template: 17% 1fr/ 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "main main main";
+    grid-gap: 1em;
+    margin: 2em 2em;
+}
+.nav-container{
+    grid-area: nav;
+    display: grid;
+    grid-template: 1fr / 0.5fr 1fr 1fr;
+    grid-template-areas: 
+    "logo nav-link nav-link";
+    grid-gap: 1em;
+    box-sizing: border-box;
+    align-items: end;
+}
+.logo-container{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+.nav-link-container{
+    grid-area: nav-link;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f2e4f;
+    border-radius: 1em;
+    align-items: flex-end;
+    
+}
+.nav-link ul{
+    display: flex;
+    gap: 8em;
+    
+}
+.nav-link li{
+    list-style-type: none;
+    background-color: #0f2e4f;
+    color: white;
+}
+.nav-link li a{
+    text-decoration: none;
+    background-color: inherit;
+}
+.nav-link li a:hover{
+    background-color: gray;
+    padding: 1em 10px;
+}
+.search-cont{
+    margin: 1em 1em;
+}
+.pending-container{
+    grid-area: main;
+    
+}
+.pending-nav-cont{
+    display:flex;
+    justify-content: space-between;
+}
+.completed-container{
+    grid-area: main;
+    display: none;
+}
+.history-container{
+    grid-area: main;
+    display: none;
+}
+.form-popup{
+    position:fixed;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 1;
+}
+.form-container{
+    background-color: white;
+    height: 80vh;
+    margin: 5em 10em;
+    display: grid;
+    grid-template: 15% 15% 15% auto auto 10% / 1fr 1fr 1fr;
+    grid-template-areas: 
+    "control date req"
+    "from doc req"
+    "send stat act"
+    "subject subject act"
+    "subject subject act"
+    "btn btn btn";
+    border: 2px solid black;
+    gap: 2em;
+    padding: 3em 3em;
+}
+.form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 5em 5em;
+    height: 50vh;
+    z-index: 2;
+}
+.control-cont{
+    grid-area: control;
+}
+.control-cont input{
+    border-color: black;
+}
+.date-cont{
+    grid-area: date;
+}
+.date-cont input{
+    border-color: black;
+}
+.from-cont{
+    grid-area: from;
+}
+.from-cont input{
+    border-color: black;
+}
+.doc-cont{
+    grid-area: doc;
+}
+.doc-cont input{
+    border-color: black;
+}
+.send-cont{
+    grid-area: send;
+}
+.send-cont input{
+    border-color: black;
+}
+.sub-cont{
+    grid-area: subject;
+    
+}
+.sub-cont textarea{
+    height: 100%;
+    width: 1fr;
+    border-color: black;
+    resize: none;
+}
+.req-cont{
+    grid-area: req;
+    
+}
+.req-cont textarea{
+    height: 100%;
+    width: 1fr;
+    border-color: black;
+    resize: none;
+}
+.act-cont{
+    grid-area: act;
+}
+.act-cont textarea{
+    height: 100%;
+    width: 1fr;
+    border-color: black;
+    resize: none;
+}
+.stat-cont{
+    grid-area: stat;
+}
+.stat-cont input{
+    border-color: black;
+}
+.btn-foot{
+    grid-area: btn;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-foot input{
+    border-color: black;
+}
+.btn-foot-in{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
