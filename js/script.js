@@ -5,6 +5,13 @@ function openForm() {
   function closeForm() {
     document.getElementById("clickform").style.display = "none";
   }
+  function openUpdate(){
+    document.getElementById("clickupdate").style.display = "block";
+  }
+  function closeUpdate(){
+    document.getElementById("clickupdate").style.display = "none";
+  }
+  
   function openPend(){
     document.getElementById("section1").style.display = "block";
     document.getElementById("section2").style.display = "none";
